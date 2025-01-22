@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Show letter grade</title>
+	<script>
+		//Get how many grades will be inputted.
+		do {
+			var repeat = false;
+			var arrLength = prompt("How many grades are you going to enter?[1-30]", 5);
+			if (arrLength < 1 || arrLength > 30)
+			{
+				alert("That number is out of range, try again");
+				repeat = true;
+			}
+			if (isNaN(arrLength))
+			{
+				alert("Must enter a number, please try again");
+				repeat = true;
+			}
+
+		} while (repeat); //Repeat loop if length is not in range or is not a number.
+
+		//Input all grades into array
+		var grades = new Array(arrLength);
+		for (var currentGrade = 0; currentGrade < arrLength; currentGrade++)
+		{
+			var tempGrade = prompt("Grade " + (currentGrade + 1) + ": Enter number grade from 0 to 100 inclusive.");
+			while (isNaN(tempGrade) || tempGrade < 0 || tempGrade > 100)
+			{
+				alert("Please enter a valid entry");
+				tempGrade = prompt("Grade " + (currentGrade + 1) + ": Enter number grade from 0 to 100 inclusive.");
+			}
+
+			grades[currentGrade] = tempGrade;
+		}
+
+		
+
+	</script>
+</head>
+<body>
+	<section>
+    	<h1>Grade Conversion Results</h1>
+		<script>
+			
+		</script>
+	</section>
+</body>
+</html>
