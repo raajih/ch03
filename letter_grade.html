@@ -41,9 +41,18 @@
 </head>
 <body>
 	<section>
-    	<h1>Grade Conversion Results</h1>
+    	<h1>Raajih's Grade Conversion Results</h1>
 		<script>
-			
+			for (var i = 0; i < grades.length; i++)
+			{
+				var letterGrade = "F";
+				if (grades[i] >= 88) {letterGrade = "A";}
+				else if (grades[i] >= 80) {letterGrade = "B";}
+				else if (grades[i] >= 68) {letterGrade = "C";}
+				else if (grades[i] >= 60) {letterGrade = "D";}
+
+				document.write("Grade " + grades[i] + " = " + letterGrade + "<br>");
+			}
 		</script>
 	</section>
 </body>
